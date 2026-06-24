@@ -1,0 +1,18 @@
+# OmniWarehouse Requirements
+# Python >= 3.9
+
+# Core dependencies
+numpy>=1.21.0
+matplotlib>=3.5.0
+scipy>=1.7.0
+
+# ML / Forecasting (optional, for supply_chain/forecasting.py)
+torch>=2.0.0  # CPU version: pip install torch --index-url https://download.pytorch.org/whl/cpu
+plotly>=5.15.0  # Interactive visualization
+
+# Testing
+pytest>=7.0.0
+
+# Dev / Documentation
+black>=23.0.0
+flake8>=6.0.0
