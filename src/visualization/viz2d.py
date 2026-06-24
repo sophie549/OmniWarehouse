@@ -254,16 +254,24 @@ class WarehouseVisualizer:
             label=label if label not in self.ax.get_legend_handles_labels()[1] else ""
         )
         
-        # 起点和终点
+        # 起点和终点（分开画，marker 不支持列表）
         self.ax.scatter(
-            [path[0, 0], path[-1, 0]],
-            [path[0, 1], path[-1, 1]],
-            c=['green', 'red'],
-            s=[100, 100],
-            marker=['o', 's'],
+            path[0, 0], path[0, 1],
+            c='green',
+            s=100,
+            marker='o',
             edgecolors='black',
             linewidths=2,
-            label=''  # 不单独添加图例
+            label='Start'
+        )
+        self.ax.scatter(
+            path[-1, 0], path[-1, 1],
+            c='red',
+            s=100,
+            marker='s',
+            edgecolors='black',
+            linewidths=2,
+            label='Goal'
         )
         
     def render_heatmap(self, heatmap: np.ndarray, 

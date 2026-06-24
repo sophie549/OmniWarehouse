@@ -26,6 +26,7 @@
 - [快速开始](#-快速开始)
 - [模块说明](#-模块说明)
 - [Demo 运行结果](#-demo-运行结果)
+- [可视化效果](#-可视化效果)
 - [基准测试](#-基准测试)
 - [真实数据集测试](#-真实数据集测试)
 - [算法细节](#-算法细节)
@@ -218,6 +219,19 @@ python demo_integration.py --mode coordination
 python demo_integration.py --mode integration
 ```
 
+### 可视化生成
+
+```bash
+# 生成 AGV 路径动画（GIF）
+python scripts/animation_agv.py
+
+# 生成 3D 交互式可视化（HTML）
+python scripts/visualize_3d.py
+
+# 生成完整 2D 可视化（PNG）
+python scripts/visualize_full.py
+```
+
 ---
 
 ## 📦 模块说明
@@ -373,6 +387,34 @@ python demo_integration.py --mode all
   All demos completed in 169.78s
 ====================================================================
 ```
+
+---
+
+## 🎨 可视化效果
+
+### AGV 路径动画
+
+![AGV Path Animation](assets/agv_animation.gif)
+
+*上图：AGV 沿规划路径移动的动画（GIF）*
+
+生成命令：
+```bash
+python scripts/animation_agv.py
+```
+
+### 3D 交互式可视化
+
+![3D Warehouse](assets/demo_visualization_full.png)
+
+*上图：3D 交互式仓库可视化（HTML）*
+
+生成命令：
+```bash
+python scripts/visualize_3d.py
+```
+
+打开生成的 `assets/warehouse_3d.html` 可以在浏览器中进行交互式 3D 查看（旋转、缩放、平移）。
 
 ---
 

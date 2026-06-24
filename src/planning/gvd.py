@@ -96,7 +96,7 @@ class GVDSkeletonExtractor:
                 for di, dj, cost in offsets:
                     ni, nj = i + di, j + dj
                     if 0 <= ni < H and 0 <= nj < W and d[ni, nj] < np.inf:
-                        new_dist = (d[ni, nj] + cost) * self.res
+                        new_dist = d[ni, nj] + cost * self.res
                         if new_dist < d[i, j]:
                             d[i, j] = new_dist
                             self.obstacle_ids[i, j] = self.obstacle_ids[ni, nj]
@@ -116,7 +116,7 @@ class GVDSkeletonExtractor:
                 for di, dj, cost in offsets:
                     ni, nj = i + di, j + dj
                     if 0 <= ni < H and 0 <= nj < W and d[ni, nj] < np.inf:
-                        new_dist = (d[ni, nj] + cost) * self.res
+                        new_dist = d[ni, nj] + cost * self.res
                         if new_dist < d[i, j]:
                             d[i, j] = new_dist
                             self.obstacle_ids[i, j] = self.obstacle_ids[ni, nj]
